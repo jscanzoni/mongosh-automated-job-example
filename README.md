@@ -1,14 +1,10 @@
-# MongoDB Script Example
+# Mongosh Automated Job Example
 
 ## About
 
-This repository contains a MongoDB script that performs the following tasks:
-1. Connects to a MongoDB database.
-2. Inserts five documents into a `source` collection with random integer values.
-3. Creates an index on the `type` field.
-4. Aggregates the sum of values by `type` and merges the results into a `destination` collection, using `type` as the `_id`.
+This repository provides an example of how to execute a JavaScript file using `mongosh` instead of the MongoDB driver, and how it can be scheduled using cron. The purpose of this script is to demonstrate a basic MongoDB operation involving data insertion, database maintenance, and summarization via the aggregation framework.
 
-## Script Explanation
+## Example Script Explanation
 
 The script `generate_and_sum.js` does the following:
 - Connects to the MongoDB database using a specified connection string and namespace.
@@ -97,4 +93,3 @@ db.source.aggregate([
     }
   }
 ]);
-```
